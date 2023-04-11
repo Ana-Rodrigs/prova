@@ -9,16 +9,21 @@
 </head>
 <body>
 
-<div class="container" >
+<div class="container" ">
    <h2 class ="text-success" >Conversor de valores</h2>
 </div>
    <div class="container-sm">
     <div class="row">
       <div class="col-md-auto">
    <div class="input-group mb-4">
-    <span class="input-group-text" >digite o valor em real</span>
-    <input type="text" id="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <span class="input-group-text" >digite o valor em real (R$)</span>
+    <input type="text" id="valor1" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
   </div>   
+  <div class="input-group mb-4">
+    <span class="input-group-text" >Valor de cotação desejado(€ $ £)</span>
+    <input type="text" id="varlor2" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div> 
+  
 </div>
 </div>
  <div class="">
@@ -33,24 +38,16 @@
 </div>
 </div>
 </body>
+
+
 <script>
-    const button = document.querySelector('#button');
-    const resultText = document.querySelector('#result');
-
-
-    function palindrome(text){
-    const changedText = text.split('').reverse().join('');
-    return text === changedText ? true : false;    
- 
- }
-    button.addEventListener('click', () => {
-    const textValue = document.querySelector('#text').value;
-    const result = palindrome(textValue);
-
-    result
-        ? resultText.innerHTML = 'A sequência é um palídromo'
-        : resultText.innerHTML = 'A sequência não é um palídromo'
-    })
+    valor = document.getElementById("valor1");
+    valor = document.getElementById("valor2");
+      valor.addEventListener(keyup, operacao);
+      var valor1 ="";
+      var valor2 ="";
+      var resultado ="";
+      txtresultado= document.getElementById("txtresultado");
 
     
 
