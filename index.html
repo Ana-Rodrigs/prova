@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="container" ">
+<div class="container" >
    <h2 class ="text-success" >Conversor de valores</h2>
 </div>
    <div class="container-sm">
@@ -17,18 +17,18 @@
       <div class="col-md-auto">
    <div class="input-group mb-4">
     <span class="input-group-text" >digite o valor em real (R$)</span>
-    <input type="text" id="textinput1"name="textinput1" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <input id="valor" name="textinput1" value="" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
   </div>   
   <div class="input-group mb-4">
     <span class="input-group-text" >Valor de cotação desejado(€ $ £)</span>
-    <input type="text" id="textinput2" name="textinput2" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <input id="valor2" name="textinput2" value="" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
   </div> 
   
 </div>
 </div>
  <div class="">
     <button class=" btn btn-outline-success mb-4 "
-    id="button" onclick="operacao()" type="button" >Converter</button>
+    id="button" onclick= "operacao()"type="button" >Converter</button>
   </div>
 
   <div class="col-4  border-success">
@@ -41,19 +41,19 @@
 
 
 <script>
-    var valor1 = document.getElementById("#textinput1").value;
-    var valor2 = document.getElementById("#textinput2").value;
-    var valor1 ="";
+    valor = document.getElementById("valor");
+    valor2 = document.getElementById("valor2");
+    var valor ="";
     var valor2="";
-     
+    
       var resultado ="";
 
       txtresultado= document.getElementById("txtresultado");
-      document.getElementById("resultado").value = resultado;
+     /// document.getElementById("resultado").value = resultado;
 
      function operacao(){
        
-        alert(valor1, valor2);
+        alert( valor, valor2);
      }
 
 
