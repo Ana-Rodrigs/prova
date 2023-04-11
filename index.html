@@ -20,19 +20,37 @@
     <input id="valor1"  value="" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
   </div>   
   <div class="input-group mb-4">
-    <span class="input-group-text" >Valor de cotação desejado(€ $ £)</span>
+    <span class="input-group-text" >Valor de cotação Euro(€)</span>
     <input id="valor2"  value="" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div> 
+  <div class="input-group mb-4">
+    <span class="input-group-text" >Valor de cotação Dólar($)</span>
+    <input id="valor3"  value="" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+  </div> 
+  <div class="input-group mb-4">
+    <span class="input-group-text" >Valor de cotação Pound(£)</span>
+    <input id="valor4"  value="" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
   </div> 
   
 </div>
 </div>
- <div class="">
-    <button class=" btn btn-outline-success mb-4 "
-    onclick= "operacao()" type="button"> Converter </button>
+<div class="d-grid gap-1 col-4 mx-auto"> 
+    
+        <button class="btn btn-success" type="button" onclick="operacao()">Button</button>
+   
   </div>
 
   <div class="col-4  border-success">
     <textarea name="resultado" id="resultado" class="form-control"cols="10" rows="2" disabled ></textarea> 
+  </div>  
+  <div class="col-4  border-success">
+    <textarea name="resultado2" id="resultado" class="form-control"cols="10" rows="2" disabled ></textarea> 
+  </div>  
+  <div class="col-4  border-success">
+    <textarea name="resultado3" id="resultado" class="form-control"cols="10" rows="2" disabled ></textarea> 
+  </div>  
+  <div class="col-4  border-success">
+    <textarea name="resultado4" id="resultado" class="form-control"cols="10" rows="2" disabled ></textarea> 
   </div>  
 
 </div>
@@ -41,12 +59,14 @@
 
 
 <script>
-    function operacao(op){
-    var valor1, valor2, resultado;
+    function operacao(){
+    var valor1, valor2, valor3, valor4, resultado;
     var valor1  = parseFloat(document.getElementById("valor1").value);
     var valor2 = parseFloat(document.getElementById("valor2").value)
    
-    
+    if (op ==='€' ){
+        resultado = valor1/valor2;
+    }
     
 
     
