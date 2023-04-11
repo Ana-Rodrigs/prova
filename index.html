@@ -9,13 +9,12 @@
 </head>
 <body>
 
-<div class="container" >
-   <h2 class ="text-success" >Conversor de valores</h2>
-</div>
+<div class="container-sm" style="background-color:rgb(255, 206, 127); width: 550px; border-radius: 5%; height: 600px;">
+   <h2 class ="text" style="color:  rgb(155, 201, 171) ;" >Conversor de valores</h2>
    <div class="container-sm">
     <div class="row">
       <div class="col-md-auto">
-   <div class="input-group mb-4">
+   <div class="input-group  mb-4">
     <span class="input-group-text" >digite o valor em real (R$)</span>
     <input id="valor1"  value="" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
   </div>   
@@ -31,27 +30,25 @@
     <span class="input-group-text" >Valor de cotação Pound(£)</span>
     <input id="valor4"  value="" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
   </div> 
-  
+  <div class="d-grid gap-2 col-6 mx-auto" style="margin: right; padding: 10px;"> 
+    <button class="btn btn" type="button" onclick="operacao()" style="background-color: rgb(155, 201, 171);">Button</button>
+      
+     </div>
 </div>
 </div>
-<div class="d-grid gap-1 col-4 mx-auto"> 
-    
-        <button class="btn btn-success" type="button" onclick="operacao()">Button</button>
-   
-  </div>
+
 
   <div class="col-4  border-success">
-    <textarea name="resultado" id="resultado" class="form-control"cols="10" rows="2" disabled ></textarea> 
+    <textarea name="resultado" id="resultado" class="form-control"cols="10" rows="2" disabled style=" width: 500px ; margin: 10px;" ></textarea> 
   </div>  
   <div class="col-4  border-success">
-    <textarea name="resultado2" id="resultado" class="form-control"cols="10" rows="2" disabled ></textarea> 
+    <textarea name="resultado2" id="resultado2" class="form-control"cols="10" rows="2" disabled style=" width: 500px ;margin: 10px;"></textarea> 
   </div>  
   <div class="col-4  border-success">
-    <textarea name="resultado3" id="resultado" class="form-control"cols="10" rows="2" disabled ></textarea> 
+    <textarea name="resultado3" id="resultado3" class="form-control"cols="10" rows="2" disabled style=" width: 500px ;margin: 10px;"></textarea> 
   </div>  
-  <div class="col-4  border-success">
-    <textarea name="resultado4" id="resultado" class="form-control"cols="10" rows="2" disabled ></textarea> 
-  </div>  
+</div>
+
 
 </div>
 </div>
@@ -60,18 +57,25 @@
 
 <script>
     function operacao(){
-    var valor1, valor2, valor3, valor4, resultado;
+    var valor1, valor2, valor3, valor4, convertido1, convertido2, convertido3, resultado, resultado2, resultado3;
     var valor1  = parseFloat(document.getElementById("valor1").value);
     var valor2 = parseFloat(document.getElementById("valor2").value)
-   
-    if (op ==='€' ){
-        resultado = valor1/valor2;
-    }
-    
+    var valor3 = parseFloat(document.getElementById("valor3").value)
+    var valor4 = parseFloat(document.getElementById("valor4").value)
 
-    
+
+    convertido1 = valor1/valor2;
+    resultado = ("A conversão de real para Euro é " + convertido1.toFixed(2)  );
+    convertido2 = valor1/valor3;
+    resultado2 = ("A conversão de real para Dólar é " + convertido2.toFixed(2));
+    convertido3 = valor1/ valor4;
+    resultado3 = ("A conversão de real para Pound é " + convertido3.toFixed(2) );
+
 
      document.getElementById("resultado").value = resultado;
+     document.getElementById("resultado2").value = resultado2;
+     document.getElementById("resultado3").value = resultado3;
+
     
      }
 
