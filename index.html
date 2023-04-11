@@ -17,18 +17,18 @@
       <div class="col-md-auto">
    <div class="input-group mb-4">
     <span class="input-group-text" >digite o valor em real (R$)</span>
-    <input id="valor" name="textinput1" value="" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <input id="valor1"  value="" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
   </div>   
   <div class="input-group mb-4">
     <span class="input-group-text" >Valor de cotação desejado(€ $ £)</span>
-    <input id="valor2" name="textinput2" value="" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
+    <input id="valor2"  value="" type="number" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default">
   </div> 
   
 </div>
 </div>
  <div class="">
     <button class=" btn btn-outline-success mb-4 "
-    id="button" onclick= "operacao()"type="button" >Converter</button>
+    onclick= "operacao()" type="button"> Converter </button>
   </div>
 
   <div class="col-4  border-success">
@@ -41,19 +41,21 @@
 
 
 <script>
-    valor = document.getElementById("valor");
-    valor2 = document.getElementById("valor2");
-    var valor ="";
-    var valor2="";
+    function operacao(){
+    var valor1, valor2, resultado;
+    var valor1  = parseFloat(document.getElementById("valor1").value);
+    var valor2 = parseFloat(document.getElementById("valor2").value)
+
     
-      var resultado ="";
+    var resultado ="";
+    if(){
+    resultado = valor1 / valor2;
+    
 
-      txtresultado= document.getElementById("txtresultado");
-     /// document.getElementById("resultado").value = resultado;
-
-     function operacao(){
+    document.getElementById("resultado").value = resultado;
        
-        alert( valor, valor2);
+        
+
      }
 
 
